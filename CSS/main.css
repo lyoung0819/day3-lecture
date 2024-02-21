@@ -84,3 +84,29 @@ body {
 }
 
 .post {grid-area: post;}
+
+.post-card {
+    background-color: lightgray;
+    padding: 1em; /*em is based on the font size in the element*/
+    border: 2px solid cornflowerblue;
+    border-radius: 25px;
+    margin-bottom: 1vh;
+}
+
+.post-card > p {
+    margin: 2vh 0;
+}
+
+.post-links {
+    display: flex;
+    justify-content: space-around; /* flex items (flexbox children) need width or height specification*/
+}
+
+.post-links > a {
+    color: black;
+    text-decoration: none;
+}
+
+.post-links > a:hover {
+    text-decoration: underline;
+}
