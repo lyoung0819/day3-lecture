@@ -1,3 +1,7 @@
+/* Remove any margin a browser has by default*/
+* {
+    margin: 0;
+}
 
 body {
     background-color: salmon;
@@ -14,11 +18,36 @@ body {
     ". prof-pic prof-info ."
     ". post post .";
 }
-.nav { grid-area: nav;}
-.prof-pic { grid-area: prof-pic;}
-.prof-info {grid-area: prof-info;}
-.post {grid-area: post;}
 
 .area-border {
     border: 2px solid black;
 }
+
+.nav { 
+    grid-area: nav;
+    background-color: cornflowerblue;
+    /* to make a sticky header/nav bar, you need two properties: the position of sticky, and where you want it to be at a given view/margin */
+    position: sticky;
+    top: 0;
+}
+
+.nav-links {
+    height: 100%; /* divs by default only take up the space of their content, so adding height of 100% will make sure the div for the links takes up more than just the link text height */
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+
+.nav-links > a { /*this will style any a tag that is a child of the nav-links class*/
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links > a:hover {
+    font-size: larger;
+    text-decoration: underline;
+}
+
+.prof-pic { grid-area: prof-pic;}
+.prof-info {grid-area: prof-info;}
+.post {grid-area: post;}
