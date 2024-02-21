@@ -20,7 +20,7 @@ body {
 }
 
 .area-border {
-    border: 2px solid black;
+    border: 2px solid transparent;
 }
 
 .nav { 
@@ -48,6 +48,39 @@ body {
     text-decoration: underline;
 }
 
-.prof-pic { grid-area: prof-pic;}
+.prof-pic { 
+    grid-area: prof-pic;
+    align-self: center;
+}
+
+.img-container {
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+#prof-img {
+    max-width: auto;
+    height: 100%h;
+}
+
 .prof-info {grid-area: prof-info;}
+
+.info-container {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.contact {
+    display:flex; /*flex direction by default is a row so this makes the text side by side (from the vertical direction it was before*/
+    width: 100%;
+    justify-content: space-around;
+}
+
 .post {grid-area: post;}
