@@ -1,0 +1,24 @@
+
+body {
+    background-color: salmon;
+}
+
+.grid-container {
+    min-height: 100vh; /*div by default only takes the height of its content */
+    display: grid;
+    grid-template-columns: 10vw 1fr 2fr 10vw;
+    grid-template-rows: 10vh 40vh 1fr;
+    row-gap: 3vh;
+    grid-template-areas:
+    "nav nav nav nav"
+    ". prof-pic prof-info ."
+    ". post post .";
+}
+.nav { grid-area: nav;}
+.prof-pic { grid-area: prof-pic;}
+.prof-info {grid-area: prof-info;}
+.post {grid-area: post;}
+
+.area-border {
+    border: 2px solid black;
+}
